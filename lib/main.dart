@@ -1,7 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:service/authentication/welcome.dart';
+import 'package:service/service/displayer.dart';
+import 'package:service/service/displayrequest.dart';
+import 'package:service/service/displayrequest1.dart';
 import 'package:service/service/service1.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -14,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ServicePage(),
+      home: WelcomePage(),
     );
   }
 }
