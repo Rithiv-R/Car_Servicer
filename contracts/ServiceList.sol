@@ -14,7 +14,7 @@ contract ServiceList{
 
     event ServiceCreated(string _customeremail,string carreg,string servicehash);
 
-    constructor() public {
+    constructor() public{
         servicecount =0;
     }
     
